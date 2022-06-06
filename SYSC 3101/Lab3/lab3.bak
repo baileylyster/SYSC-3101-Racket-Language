@@ -1,0 +1,13 @@
+#lang racket
+
+
+
+(define (count-multiples numbers n)
+  (cond
+    [(empty? numbers) 0]
+    [(equal? 0 (remainder (car numbers) n)) (+ (count-multiples (cdr numbers) n) 1)]
+    [else (+  (count-multiples (cdr numbers) n) 0)]))
+
+
+
+
